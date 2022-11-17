@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 
-import styles from '@/pages/index.module.css'
+import styles from "@/pages/index.module.css";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Home() {
   return (
@@ -46,6 +48,17 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <Swiper
+          pagination={true}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          <SwiperSlide>1</SwiperSlide>
+          <SwiperSlide>2</SwiperSlide>
+          <SwiperSlide>3</SwiperSlide>
+          <SwiperSlide>4</SwiperSlide>
+          <SwiperSlide>5</SwiperSlide>
+        </Swiper>
       </main>
 
       <footer className={styles.footer}>
@@ -54,12 +67,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
