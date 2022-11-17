@@ -22,14 +22,5 @@
     "jest-environment-jsdom": "28.1.0",
     "sass": "^1.56.1",
     "typescript": "4.6.4"
-  },
-  "jest": {
-    "watchPathIgnorePatterns": [
-      "node_modules",
-      ".jest-test-results.json"
-    ],
-    "transformIgnorePatterns": [
-      "/node_modules/(?!(swiper|ssr-window|dom7))"
-    ]
   }
 }

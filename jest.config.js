@@ -16,6 +16,7 @@ const customJestConfig = {
   },
   testEnvironment: "jest-environment-jsdom",
   transformIgnorePatterns: ["/node_modules/(?!(swiper|ssr-window|dom7))"],
+  watchPathIgnorePatterns: ["node_modules", ".jest-test-results.json"],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
